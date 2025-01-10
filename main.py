@@ -89,12 +89,12 @@ def feedback_system(video_path):
     emotion_label = xgb_model.predict([input_features])[0]
 
     emotion_mapping = {
-        0: "Irritability Detected",
-        1: "Annoyed",
-        2: "High Anxiety",
-        3: "Healthy",
-        4: "Depression Warning",
-        5: "Emotionally Stable"
+        0: "Anger Detected",
+        1: "Annoyance Detected",
+        2: "High Anxiety Detected",
+        3: "Looks like you are Happy",
+        4: "Depression Detected",
+        5: "You are Emotionally Stable"
     }
     feedback = emotion_mapping.get(emotion_label, "Unknown")
 
@@ -102,9 +102,9 @@ def feedback_system(video_path):
         0: "Hi! Let's take a deep breath and count to 10.... Feel better?",
         1: "Hi! You seem annoyed, let's hear your favourite song!",
         2: "Hi! I feel you are anxious, no need to worry, you are not alone!",
-        3: "Hi! I am thrilled that you are healthy and happy!",
+        3: "I am thrilled that you are healthy and happy!",
         4: "Hi...I am sorry you feel that way, we will work this out, now let's take a deep breath.",
-        5: "Hi! Well let's keep going!"
+        5: "Well let's keep going!"
     }
     suggestion = suggestion_mapping.get(emotion_label, "No suggestion available.")
 

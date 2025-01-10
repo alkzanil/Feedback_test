@@ -94,7 +94,7 @@ def feedback_system(video_path):
         2: "High Anxiety Detected",
         3: "Looks like you are Happy",
         4: "Depression Detected",
-        5: "You are Emotionally Stable"
+        5: "You are calm"
     }
     feedback = emotion_mapping.get(emotion_label, "Unknown")
 
